@@ -61,7 +61,7 @@
 \end{tabular}
 \end{center}
 
-\chapter{Introduction} \label{chap:int}
+\part{Introduction} \label{part:int}
 \textit{In honour of the madness that created this document, this introduction has been carried over exactly as it was first written.}
 
 I have always dreamed of being a villain. A cursed spirit, a natural disaster that alters the composition of wherever it goes, and leaves without explanation. Why? This world has no need for a battle maniac like me, and dares suffocate me with its hundreds of chains, restrictions and hypocrisy. It is only natural that I respond in kind, and attempt to break out. For example, these symbolic barriers we call language\ldots if broken, the people who look at foreigners and envy their lives, or look at foreign lands as some utopia that will finally fulfil their dreams and desires will understand the reality behind them, realizing that there is in fact, no paradise to escape to. You cannot escape your fate, and WILL lose, no matter what. This, I hope will aid in the collapse of society and bring me the joy I seek\ldots
@@ -111,7 +111,7 @@ Lastly, a few words about \textcolor{magenta}{\bt{copyright}}. Of course, you mu
 Assuming that due credit is given, I do not care if people  make notes of, reverse engineer or modify this solver for personal use, or even start YouTube channels or other commercial activity using the mentioned principles. I hereby distance myself from all profits and losses that arise as a consequence of this solver, but will ALWAYS retain its original ownership, irrespective of how many co-authors contribute to it in the future. All authors will be named separately per perspective, and  included in its final section along with references and other credits.
 
 \bt{This series is entirely made using open source tools, and will always remain open source.} If you need help with the  \LaTeX{} code used, or have other questions, you may use the email above, this time with no title restrictions. Since all the employed tools are open source, I also take no responsibility for any potential software/hardware damage that this solver causes. I am merely a user, and have ONLY built the theories contained in this document, not any software that was used to create it.
-\section{How to proceed?} 
+\chapter{How to proceed?} 
 There are multiple things that must be mentioned before we begin.
 \begin{enumerate}
     \item This work will not always call concepts by their formal names: I will often give them new names to aid understanding. Do not be surprised. All renamed terms are detailed in \autoref{chap:term}.
@@ -328,6 +328,8 @@ Let $f$ be a positive rational number, with $[f]$ and $\{f\}$ representing the f
     \label{eq:factor}
 \end{equation}
 \end{syntax}
+Some perspectives also use special counters with pure numbers to denote the type of object being counted (Japanese). English is not one of them.
+
 Using this property, any factor $f$ can be expressed as the sum of an integral part (represented by a pure number) and a fractional part (represented by a rank counter). To express  multiplicities, a marker (`times' for English) is later  appended to $f$:
 \begin{example}
     \begin{tabular}{cc|cc}
@@ -567,7 +569,7 @@ A noun unit with a preposition is no longer counted towards the traditionally ex
 
 Basic prepositions exist in some form in every language, but their situational associations are often different and need to be relearned. Prepositions are to cases what adverbs are to tense time forms: The lesser the reliance upon them, the rougher a language will become.
 \section{Sentence} \label{sec:enstce}
-Uptill now, verb chains (VC) and noun units have been introduced and documented. One may also form some other units like adverb or pronoun units that can be deployed beside these. This grouping of similar components into units is similar to `tokenization' with a `Lexer': an essential first step for compiling any computer code. Using these units in specific orders, interpretable sequences can be formed, which are called sentences. A formal definition of a sentence is:
+Until now, verb chains (VC) and noun units have been introduced and documented. One may also form some other units like adverb or pronoun units that can be deployed beside these. This grouping of similar components into units is similar to `tokenization' with a `Lexer': an essential first step for compiling any computer code. Using these units in specific orders, interpretable sequences can be formed, which are called sentences. A formal definition of a sentence is:
 \begin{syntax}
     An ordering of the CV, DC and various  units according to fixed rules,  which yields a comprehensible meaning is called a sentence
 \end{syntax}
@@ -575,7 +577,7 @@ Note that the meaning is not necessarily unique, which is the foundation of all 
 
 The unit order and modes of sentences for various purposes are important for understanding the general mien of the perspective.  A sentence must always have a VC,  case $1$ unit and mode. These components are sometimes implicit but still present. Expressive capabilities are then added using the features mentioned in the previous subsections.
 
-Sentence mode is normally encoded in the VC or unit placement, and uses  unique special combinations that change sentence interpretation, rather than simply changing the state of the action as a verb aspect would do. Hence, sentence modes and verb aspects are independent. Examples of some sentence modes: Interrogation, Voices (Active/Passive), Speech (Direct/Indirect), Orders\ldots
+Sentence mode is  encoded in the VC or unit placement, and uses  unique special combinations that change sentence interpretation, rather than simply changing the state of the action as a verb aspect would do. Hence, sentence modes and verb aspects are independent. Examples of some sentence modes: Interrogation, Voices (Active/Passive), Speech (Direct/Indirect), Orders\ldots
 
 Among all modes, the voice (Active/Passive) is special since it is necessary, and can coexist with other modes or stand alone. However, no other mode can exist without a voice. Hence, the voice will be termed as the `principle mode (PM)', and all others as `optional modes (OM)'. For any verb $V$, the method to find the base cell $\vm{T}(n_1,n_2)$ of its VC corresponding to the given optional mode is as follows:
 \begin{enumerate}
@@ -584,12 +586,17 @@ Among all modes, the voice (Active/Passive) is special since it is necessary, an
     \item Deploy any verb $R\in\mathcal{S}$, if required
 \end{enumerate}
 After the base cell is found,  consequent computation is performed using the steps in \autoref{fig:enverbZ2}. Depending on the optional mode, $\vm{T}$ may need to be updated, as some optional modes  modify its structure. As the final step, the optional mode is applied on the CV. 
-
-The optional mode `Order/Request' requires the active voice, $\vm{T}(n_1,n_2)$ and does not allow $R\in\mathcal{S}$, which makes most of the calculation trivial for it. By default, all the consequent optional mode explanations will  consider the active voice. Any passive structures can be found using the above algorithm.
+\begin{example}
+The optional mode `Order/Request' requires the active voice, $\vm{T}(n_1,n_2)$ and does not allow $R\in\mathcal{S}$, which makes most of the calculation trivial for it. 
+\end{example}
+By default, all the consequent optional mode explanations will  consider the active voice. Any passive structures can be found using the above algorithm.
 
 If the sign $\biguplus $ is declared at the beginning of a subsection, it defines a sentence mode.
 \subsection{Punctuation}
-The flow of sentences is  decided by these symbols, which while similar across perspectives are often never exactly  same. Most important for written communication or mental transliteration. This section will help decode tiny nuances that would otherwise not make sense: German writes double quotes as \textgerman{\enquote{A}} as compared to \enquote{A} in English.
+The flow of sentences is  decided by these symbols, which while similar across perspectives are often never exactly  same. Most important for written communication or mental transliteration. This section will help decode tiny nuances that would otherwise not make sense: 
+\begin{example}
+German writes double quotes as \textgerman{\enquote{A}} whereas English as \enquote{A}
+\end{example}
 
 Technically speaking, punctuation marks are separators with context attached to them. Although everyone knows their general idea, a description of their use cases is still  useful. Instead of the actual examples, these signs will be categorised into `tokens' which declare their purpose:
 \begin{enumerate}
@@ -599,17 +606,19 @@ Technically speaking, punctuation marks are separators with context attached to 
     \item \textit{InQ}: [?] - Question
     \item \textit{ExC}: [!] - Exclamation. \bt{Use} - Exclamation, order, strong emotion
     \item \textit{CoS}: [;] - Context based separation. \bt{Use} - Closely related sentences, dissimilar ideas (in long lists)
-    \item \textit{CdA}: [:] - Context dependent addition. \bt{Use} - Sentence descriptions, quotations, explanations
+    \item \textit{CdA}: [:] - Context dependent addition. \bt{Use} - Sentence descriptions, introducing quotations, explanations
     \item \textit{CoN}: [-] - Connector. \bt{Use} - Connection of related nouns 
     \item \textit{QoT}: [``A''/`A'] - Quotations. \bt{Use} - Direct speech, word-to-word referencing
     \item \textit{AoE}: [()] - Shorthand \textit{CdA}
-    \item \textit{EoL}: ['] - Elimination of letter(s). \bt{Use} - Word contraction and clubbing
+    \item \textit{EoL}: ['] - Elimination of letter(s). \bt{Use} - Word contraction and consequent clubbing
     \item \textit{SoO}: [/] - Separation of options
     \item \textit{PoU}: [\ldots] - Pause of uncertainty. \bt{Use} - Incompleteness, thinking, elimination of irrelevance (for excerpts)
 \end{enumerate}
-Anything I have not mentioned (EM dash), I do not see as important enough. This list is for the sake of completeness, memorization is NOT necessary.
+Anything I have not mentioned (EM dash), I do not see as important enough. Only some entries in this list deserve having their token codes remembered.
 \subsection{Conjunction}
-Joining sentences is the core of natural language. Often, ideas are clubbed together, contrasted, chained into multiple cause-consequence clauses and what not. This continuity is in line to how we think, and its abscence becomes painfully obvious once you try to think in a language you do not master, and must default to smaller, painstakingly formed sentences that repeatedly break the flow. They are the building blocks of logical programming, never change form, and always stay at the very beginning of whichever clause they are attributed to. Note that conjunctions are treated as `keywords' rather than units, and take EXACTLY two clause arguments, irrespective of conjunction type.
+Joining sentences is the core of natural language. Often, ideas are clubbed together, contrasted, chained into multiple cause-consequence clauses and what not. This continuity is in line to how we think, and its abscence becomes painfully obvious once you try to think in a language you do not master, and must default to smaller, painstakingly formed sentences that repeatedly break the flow.
+
+Conjunctions are the building blocks of logical programming, never change form, and always stay at the very beginning of whichever clause they are attributed to. They are treated as `keywords' rather than units, and take EXACTLY two clause arguments, irrespective of conjunction type.
 
 Any `relational' conjunction relates two clauses.  Irrespective of its meaning and which clause it is attributed to, the two clauses can normally be arranged in any order. The clause a relational conjunction is directly attributed to is its direct argument (dRA), while the other one is its indirect argument (ndRA):
 \begin{example}
@@ -617,7 +626,7 @@ Any `relational' conjunction relates two clauses.  Irrespective of its meaning a
     I am old, (because) I cannot die & (Because) I cannot die, I am old
     \end{tabular}
 \end{example}
-After one clause ends, a `comma' or similar punctuation is normally added to signify this ending. The three most important relational conjunctions are: `that, because, if', and will get special consideration. On the other hand, `additional' conjunctions are used to combine two  clauses, and have no specific punctuation rules: sometimes a `comma' is used before them, sometimes not. If the combined clauses share common units, these units appear only once:
+After one clause ends, a \itt{CoM} is normally added to signify this ending. The three most important relational conjunctions are: `that, because, if', and will get special consideration. On the other hand, `additional' conjunctions are used to combine two  clauses, and have no specific punctuation rules: sometimes a \itt{CoM} is used before them, sometimes not. If the combined clauses share common units, these units need not be duplicated:
 \begin{example}
     \begin{tabular}{m{7cm}|m{6cm}}
         He has killed the man. He has killed the woman. & He has killed the man (and) the woman\\\hline
@@ -626,19 +635,19 @@ After one clause ends, a `comma' or similar punctuation is normally added to sig
 \end{example}
 Both of these conjunction types cause significantly different effects on sentence structure, as is evident. Relational conjunctions cannot be chained, but  can be nested. In contrast,  additionals can be both chained and nested. Common units for chained additional usage are  calculated with respect to the very first argument.
 
-Relational conjunctions specify an exact relation between their argument clauses, which behaves differently from defining a set of elements like additionals do. If multiple conditions or consequences must be bundled, a relational conjunction is introduced once, and all necessary clauses are connected using additional conjunctions to make a large clause, which then becomes one of its arguments:
+\itt{Relational conjunctions specify an exact relation between their argument clauses, which behaves differently from defining a set of elements like additionals do. If multiple conditions or consequences must be bundled, a relational conjunction is introduced once, and all necessary clauses are connected using additional or relational conjunctions to make a large clause, which then becomes one of its arguments:}
 \begin{example}
     If (`a' is smaller than `c', and [`a' is smaller than] `b' but [`a' is] greater than `d'), (the program should print something). Because (`a' is smaller than `c' but [`a' is] greater than `b'), (the computer did not print anything).
 \end{example}
-In this example, the text inside the square brackets represents common units which can be eliminated. Any additional conjunction is essentially a `boolean operator' which can keep adding on itself, while relational conjunctions expect a hard stop after the second argument. However, using relationals as arguments of other relationals is valid:
+\itt{In this example, the text inside the square brackets represents common units which can be eliminated. Any additional conjunction is essentially a `boolean operator' which can keep adding on itself, while relational conjunctions expect a hard stop after the second argument. However, using relationals as arguments of other relationals is valid:}
 \begin{example}
     (The problem is) (\textit{that}) ([\textit{if}] [\{we were to say\} \{\textit{that}\} \{this method does not work\}], [we might face a rebellion])
 \end{example}
-Another way to think about this is that additionals always create a flat hierarchy, while relationals create a layered hierarchy. This is similar to how in any classic mathematical expression like
+\itt{Another way to think about this is that additionals always create a flat hierarchy, while relationals create a layered hierarchy. This is similar to how in any classic mathematical expression like}
 \begin{equation*}
     3+9\times5\div8-4
 \end{equation*}
-the precedence order of addition/subtraction, and that of division/multiplication is the same, but the division/multiplication operations must be evaluated before the others (BODMAS). Hence, attempting to create a `parse tree', where the lower levels of the tree are evaluated first will throw the division/multiplication below addition/subtraction. Until lower levels of the tree are evaluated, higher levels cannot be operated upon. However, within one level, the order of operations does not matter: additional conjunctions remain at one level of the parse tree, whereas relational conjunctions create multiple layers.
+\itt{the precedence order of addition/subtraction, and that of division/multiplication is the same, but the division/multiplication operations must be evaluated before the others (BODMAS). Hence, attempting to create a `parse tree', where the lower levels of the tree are evaluated first will throw the division/multiplication below addition/subtraction. Until lower levels of the tree are evaluated, higher levels cannot be operated upon. However, within one level, the order of operations does not matter: additional conjunctions remain at one level of the parse tree, whereas relational conjunctions create multiple layers.}
 
 A subcategory of additional conjunctions are the `coupled' conjunctions, which are split into two parts. The idea behind these is to emphasize a relative state. The first part introduces the state relation and first argument, whereas the second part introduces the last argument. Depending on the meaning, some of these are restricted to exactly two arguments:
 \begin{example}
@@ -667,7 +676,7 @@ $\biguplus$ There are two types of questions according to the type of answers th
 
 \textit{Elaborations} expect an explanation as an answer, and  are always built using  special interrogative words (like the W-words in English). These words always start the question, and contain information about the type of expected answer. Ex: `what' - something; `how' - the method; `when' - the time\ldots
 
-All questions have and normally end with a question symbol/marker like `?' to denote interrogation. Questions can never contain conjunctions.
+All questions  normally end with the \itt{InQ} to denote interrogation, and  can never contain conjunctions.
 \subsection{Describer subclause}
 $\biguplus$ These are analogous to adjectives, but contain a lot more information. The sentence does not suffer a loss of validity if this clause is eliminated:
 \begin{example}
@@ -700,7 +709,7 @@ The most commonly occurring subclauses are often contracted using  adjectival ve
     \item P1 based: Active voice, with aspect `Ongoing' - $\vm{T}(2,:)$
     \item P2 based: Passive voice (State passive), with aspect `Ongoing' - $\vm{T}(1,:)$
 \end{enumerate}
-English is a bad language to illustrate this, but I will try regardless. Due to their nature, no preposition can be used before the hook word of their expanded subclause. First, the P1 based contraction:
+English is a bad language to illustrate this, but I will try regardless. For P1 based:
 \begin{example}
     \begin{tabular}{m{6cm}|m{7cm}}
         \bt{Contracted} & \bt{Expanded} \\\hline
@@ -709,7 +718,7 @@ English is a bad language to illustrate this, but I will try regardless. Due to 
         The burning castle will have collapsed & The castle, which will be burning, will have collapsed
     \end{tabular}
 \end{example}
-Here, the fact that the castle continues to burn is something that occurs at the instance to which the sentence refers, and the castle is the subject (case $1$) of the describer subclause. Compare the sentences to their expanded versions to see the influence of time. Here, the aspect of the main sentence is irrelevant, whereas its time  is carried over into the subclause. Depending on the type of contraction, the aspect of the subclause is always fixed. For P2 based contractions:
+Here, the fact that the castle continues to burn is something that occurs at the instance to which the sentence refers, and the castle is the subject (case $1$) of the describer subclause. Compare the sentences to their expanded versions to see the influence of time. Here, the aspect of the main sentence is irrelevant, whereas its time  is carried over into the subclause. Depending on the type of contraction, the aspect of the subclause is always fixed. For P2 based:
 \begin{example}
     \begin{tabular}{m{6cm}|m{8cm}}
         \bt{Contracted} & \bt{Expanded}\\\hline
